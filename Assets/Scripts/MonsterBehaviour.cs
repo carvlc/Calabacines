@@ -22,7 +22,7 @@ public class MonsterBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Monster colision");
+            Puntaje.Instance.RestarPuntaje();
             Destroy(gameObject);
         }
     }

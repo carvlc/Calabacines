@@ -15,7 +15,7 @@ public class BonusSpawner : MonoBehaviour
     IEnumerator GenerarBonus()
     {
         randomPosition = Random.Range(-7, 7);
-        randomTime = Random.Range(2, 4);
+        randomTime = Random.Range(1, 3);
         Debug.Log(randomTime);
         Instantiate(bonus, new Vector3(randomPosition, transform.position.y, transform.position.z), transform.rotation);
         yield return new WaitForSeconds(randomTime);

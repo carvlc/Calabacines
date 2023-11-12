@@ -22,7 +22,7 @@ public class BonusBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("diamante colision");
+            Puntaje.Instance.SumarPuntaje();
             Destroy(gameObject);
         }
     }
