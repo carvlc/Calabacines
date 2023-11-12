@@ -9,8 +9,10 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     private void Start() {
-        jumpForce = 6f;// inicializamos la fuerza de salto
+        jumpForce = 15f;// inicializamos la fuerza de salto
         _rigidbody = GetComponent<Rigidbody2D>();// se obtiene el rigidbody del player
+        _rigidbody.gravityScale = 0;
+        Invoke("ActivarGravedad",5);
     }
 
     private void Update() {
@@ -30,5 +32,9 @@ public class PlayerJump : MonoBehaviour
 
     public void Jump(){
         _rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+    }
+    public void ActivarGravedad()
+    {
+        _rigidbody.gravityScale = 3;
     }
 }
