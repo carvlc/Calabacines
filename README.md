@@ -1,6 +1,6 @@
 # TRABAJO PRACTICO N°1 - PARTE2 - CALABACINES 🎃
 ## 🕹 Infinite Jumping "Calabacines" 
-Imaginen un juego llamado "Calabacines" donde el player🧍‍♂️ va saltando sobre plataformas de nubes☁ evitando caer sobre un suelo de calabazas🎃. Ademas el player🧍‍♂️ debe juntar diamantes💎 sin tocar a los enemigos👾 ya que le quitar 1 diamante. el objetivo es recolectar el mayor numero de diamantes, si el numero de diamantes es cero, termina el juego.
+Imaginen un juego llamado "Calabacines" donde el player va saltando sobre plataformas de nubes evitando caer sobre un suelo de calabazas de monster. Ademas el player debe juntar diamantes sin tocar a los enemigos ya que le quitar 1 diamante. el objetivo es recolectar el mayor numero de diamantes, si el numero de diamantes es cero, termina el juego.
 
 ## MECANICAS 
 ### JUGADOR 🧍‍♂️
@@ -27,3 +27,7 @@ Imaginen un juego llamado "Calabacines" donde el player🧍‍♂️ va saltando
 - En todo los casos comentar los scripts y fundamentar las desiciones en caso de falta de informacion o ambiguiedades.
 
 ## 📦 Version Unity 2022.3.9f1
+- Estudiante: Vilca Carlos Norberto Salvador
+- LU: 646
+- Asignatura: Programacion de VideoJuegos 1
+- Docentes: Vega Ariel Alejandro - Bustamante Samuel
