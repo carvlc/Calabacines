@@ -5,21 +5,22 @@ using UnityEngine.UIElements;
 
 public class PlatformSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject platform;
-    private float randomPosition;
-    private float randomTime;
+    [SerializeField] private GameObject platform;//variable que almacena el prefab de plataforma
+    private float randomPosition;// variable que almacena posicion
+    private float randomTime;// variable que almacena el time
     private void Start()
     {
-        StartCoroutine("GenerarNubes");
+        StartCoroutine("GenerarNubes");// se inicia la corrutina GenerarNubes
     }
 
+    // corrutina que genera nubes en posiciones aleatoria y tiepo aleatorio
     IEnumerator GenerarNubes()
     {
-        randomPosition = Random.Range(-7,7) ;
-        randomTime = Random.Range(0,3);
-        Debug.Log(randomTime);
-        Instantiate(platform,new Vector3(randomPosition, transform.position.y, transform.position.z),transform.rotation);
-        yield return new WaitForSeconds(randomTime);
-        StartCoroutine("GenerarNubes");
+        randomPosition = Random.Range(-7, 7);// se asigna un valor aleatorio a posicion
+        randomTime = Random.Range(0, 3);// se asigna un valor aleatorio a time
+        // se instancia una plataforma en posicion X aleatoriamente
+        Instantiate(platform, new Vector3(randomPosition, transform.position.y, transform.position.z), transform.rotation);
+        yield return new WaitForSeconds(randomTime);// se espera un tiempo aleatorio
+        StartCoroutine("GenerarNubes");// se vuelve a iniciar la corrutina
     }
 }
