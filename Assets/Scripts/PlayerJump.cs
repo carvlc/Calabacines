@@ -7,10 +7,11 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private float jumpForce;// fuerza del salto
     private bool isGrounded;// bandera para verificar si esta tocando plataforma
     private Rigidbody2D _rigidbody;// variable para almacenar el rigidbody
-
+    private AudioSource audioJump; // variable que almacenara el sonido de salto
     private void Start()
     {
         jumpForce = 13f;// inicializamos la fuerza de salto
+        audioJump = GetComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody2D>();// se obtiene el rigidbody del player
     }
 
@@ -37,5 +38,15 @@ public class PlayerJump : MonoBehaviour
     public void Jump()
     {
         _rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);// se aplixa la fuerza de salto al rigidbody del player
+        PlayJumpSound();// se llama a la funcion que reproduce el sonido de salto
+    }
+
+    // reproduce el sonido si el sonido no es null
+    private void PlayJumpSound()
+    {
+        if (audioJump != null)
+        {
+            audioJump.Play();
+        }
     }
 }
