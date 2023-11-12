@@ -5,6 +5,7 @@ using UnityEngine;
 public class BonusBehaviour : MonoBehaviour
 {
     private float speed;// variable para asignar la velocidad de desplazamiento del diamante bonus
+    [SerializeField] private AudioClip bonusSFX;// se crea una variable serializada para asignarle el sonido de bonus
     void Start()
     {
         speed = 1;// se inicializa la velocidad de despazamiento
@@ -25,6 +26,7 @@ public class BonusBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManagerBehaviour.Instance.PlaySound(bonusSFX);// se ejecuta el sonido del bonus
             Puntaje.Instance.SumarPuntaje();// metodo sumar puntaje
             Destroy(gameObject);// se destruye el gameobject Bonus
         }

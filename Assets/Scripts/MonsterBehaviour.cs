@@ -5,6 +5,8 @@ using UnityEngine;
 public class MonsterBehaviour : MonoBehaviour
 {
     private float speed;// variable para la velocidad de desplazamiento
+    [SerializeField] private AudioClip monsterSFX;// se crea una variable serializada para asignarle el sonido del monster
+
     void Start()
     {
         speed = 1;// se inicializa la variable de velocidad de desplazamiento
@@ -26,6 +28,7 @@ public class MonsterBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManagerBehaviour.Instance.PlaySound(monsterSFX);// se ejecuta el sonido del monster
             Puntaje.Instance.RestarPuntaje();// se llama a al metodo restarpuntaje
             Destroy(gameObject);// se destruye el objeto moster
         }

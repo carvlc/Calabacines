@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f65b664498ef8046a279faf8a9b37b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterSFX: {fileID: 8300000, guid: ffef4ba36ab73034e81f14230679e475, type: 3}
 --- !u!61 &-596245071438592180
 BoxCollider2D:
   m_ObjectHideFlags: 0
